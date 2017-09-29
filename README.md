@@ -15,4 +15,3 @@
 1.- Builder
 1.- Composite   
 1.- Strategy
-
