@@ -12,7 +12,7 @@
 
 ### Patrones de diseño utilizados
 1.- Singleton
-2.- Builder
-3.- Composite   
-4.- Strategy
+1.- Builder
+1.- Composite   
+1.- Strategy
 
