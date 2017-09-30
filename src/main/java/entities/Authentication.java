@@ -5,19 +5,13 @@ import java.util.Map;
 
 public class Authentication {
     
-    private int id;
+    private int id = 0;
     
-    private Map<Integer, User> users;
+    private Map<Integer, User> users = new HashMap<>();
     
-    private Map<Integer, Rol> rols;
+    private Map<Integer, Rol> rols = new HashMap<>();
     
-    public Authentication() {
-        this.id = 0;
-        this.users = new HashMap<>();
-        this.rols = new HashMap<>();
-    }
-    
-    public void setAuthentication(int id, Rol rol, User user) {
+    public Authentication(int id, Rol rol, User user) {
         this.id = id;
         this.rols.put(id,rol);
         this.users.put(id,user);
@@ -27,20 +21,20 @@ public class Authentication {
         return id;
     }
 
-    public User getUser(int key) {
-        return users.get(key);
+    public User getUser() {
+        return users.get(this.id);
     }
 
-    public void removeUser(int key) {
-        this.users.remove(key);
+    public void removeUser() {
+        this.users.remove(this.id);
     }
     
-    public Rol getRol(int key) {
-        return rols.get(key);
+    public Rol getRol() {
+        return rols.get(this.id);
     }
 
-    public void removeRol(int key) {
-        this.rols.remove(key);
+    public void removeRol() {
+        this.rols.remove(this.id);
     }
 
 }

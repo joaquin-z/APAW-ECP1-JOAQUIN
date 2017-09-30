@@ -3,53 +3,40 @@ package singleton;
 import java.util.HashMap;
 import java.util.Map;
 
-import entities.Rol;
-import entities.User;
+import entities.Authentication;
 
 public class AuthenticationFactory {
     
-    private static final AuthenticationFactory authentication = new AuthenticationFactory();
+    private static final AuthenticationFactory authenticationFactory = new AuthenticationFactory();
     
     private int id;
     
-    private Map<Integer, User> users;
-    
-    private Map<Integer, Rol> rols;
+    private Map<Integer, Authentication> authentications;
     
     private AuthenticationFactory() {
         this.id = 0;
-        this.users = new HashMap<>();
-        this.rols = new HashMap<>();
+        this.authentications = new HashMap<>();
     }
     
     public static AuthenticationFactory getAuthenticationFactory() {
-        return authentication;
+        return authenticationFactory;
     }
     
-    public void setAuthenticationFactory(int id, Rol rol, User user) {
+    public void setAuthenticationFactory(int id, Authentication authentication) {
         this.id = id;
-        this.rols.put(id,rol);
-        this.users.put(id,user);
+        this.authentications.put(id,authentication);
     }
 
     public int getId() {
         return id;
     }
 
-    public User getUser(int key) {
-        return users.get(key);
+    public Authentication getAuthenticationFactory(int key) {
+        return authentications.get(key);
     }
 
-    public void removeUser(int key) {
-        this.users.remove(key);
-    }
-    
-    public Rol getRol(int key) {
-        return rols.get(key);
-    }
-
-    public void removeRol(int key) {
-        this.rols.remove(key);
+    public void removeAuthenticationFactory(int key) {
+        this.authentications.remove(key);
     }
 
 }
