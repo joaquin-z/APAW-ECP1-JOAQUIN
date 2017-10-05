@@ -1,20 +1,17 @@
 package entities;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Authentication {
     
-    private int id = 0;
+    private int id;
     
-    private Map<Integer, User> users = new HashMap<>();
+    private User user;
     
-    private Map<Integer, Rol> rols = new HashMap<>();
+    private Rol rol;
     
-    public Authentication(int id, Rol rol, User user) {
+    public Authentication(int id, User user, Rol rol) {
         this.id = id;
-        this.rols.put(id,rol);
-        this.users.put(id,user);
+        this.user = user;
+        this.rol = rol;
     }
 
     public int getId() {
@@ -22,19 +19,11 @@ public class Authentication {
     }
 
     public User getUser() {
-        return users.get(this.id);
-    }
-
-    public void removeUser() {
-        this.users.remove(this.id);
+        return user;
     }
     
     public Rol getRol() {
-        return rols.get(this.id);
-    }
-
-    public void removeRol() {
-        this.rols.remove(this.id);
+        return rol;
     }
 
 }

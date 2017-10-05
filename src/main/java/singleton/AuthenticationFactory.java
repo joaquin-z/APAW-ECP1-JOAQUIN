@@ -22,21 +22,16 @@ public class AuthenticationFactory {
         return authenticationFactory;
     }
     
-    public void setAuthenticationFactory(int id, Authentication authentication) {
-        this.id = id;
-        this.authentications.put(id,authentication);
+    public void setAuthenticationFactory(Authentication authentication) {
+        this.authentications.put(authentication.getId(),authentication);
+    }
+    
+    public Authentication getAuthenticationFactory(int id) {
+        return authentications.get(id);
     }
 
     public int getId() {
         return id;
-    }
-
-    public Authentication getAuthenticationFactory(int key) {
-        return authentications.get(key);
-    }
-
-    public void removeAuthenticationFactory(int key) {
-        this.authentications.remove(key);
     }
 
 }
