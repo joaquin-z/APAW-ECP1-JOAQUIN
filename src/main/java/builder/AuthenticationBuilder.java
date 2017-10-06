@@ -32,7 +32,7 @@ public class AuthenticationBuilder {
     }
     
     public Authentication build() {
-        authentication = new Authentication(this.id, this.rol, this.user);
+        authentication = new Authentication(this.id, this.user, this.rol);
         return this.authentication;
     }
 
