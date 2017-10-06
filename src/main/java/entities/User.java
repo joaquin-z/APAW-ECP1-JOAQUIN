@@ -4,7 +4,7 @@ import java.util.Calendar;
 
 public class User {
     
-    private int id;
+    private long id;
 
     private String name;
 
@@ -12,14 +12,14 @@ public class User {
 
     private boolean active;
     
-    public User(int id, String name, Calendar birthday, boolean active) {
+    public User(long id, String name, Calendar birthday, boolean active) {
         this.id = id;
         this.name = name;
         this.birthday = birthday;
         this.active = active;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

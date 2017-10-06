@@ -37,9 +37,9 @@ public class AuthenticationFactoryTest {
         authenticationFactory.setAuthenticationFactory(authentication);
         authentication = new AuthenticationBuilder(3).user(3, "nombre3", fecha, true).rol(Rol.MANAGER).build();
         authenticationFactory.setAuthenticationFactory(authentication);
-        assertSame("nombre1", authenticationFactory.getAuthenticationFactory(1).getUser().getName());
-        assertSame(Rol.CUSTOMER, authenticationFactory.getAuthenticationFactory(2).getRol());
-        assertSame(3, authenticationFactory.getAuthenticationFactory(3).getUser().getId());
+        assertEquals("nombre1", authenticationFactory.getAuthenticationFactory(1).getUser().getName());
+        assertEquals(Rol.CUSTOMER, authenticationFactory.getAuthenticationFactory(2).getRol());
+        assertEquals(3, authenticationFactory.getAuthenticationFactory(3).getUser().getId());
     }
     
 }

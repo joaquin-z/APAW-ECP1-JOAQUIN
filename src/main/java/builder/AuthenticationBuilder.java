@@ -20,7 +20,7 @@ public class AuthenticationBuilder {
         this.id = id;
     }
     
-    public AuthenticationBuilder user(int id, String name, Calendar birthday, boolean active) {
+    public AuthenticationBuilder user(long id, String name, Calendar birthday, boolean active) {
         User user = new User(id, name, birthday, active);
         this.user = user;
         return this;
