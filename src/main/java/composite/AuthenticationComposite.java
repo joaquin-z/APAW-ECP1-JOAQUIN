@@ -5,13 +5,20 @@ import java.util.List;
 
 public class AuthenticationComposite extends AuthenticationComponent {
     
-    List<AuthenticationComponent> authenticationComponentList;
+    private List<AuthenticationComponent> authenticationComponentList;
+    
+    private String name;
 
-    public AuthenticationComposite(int id) {
-        super(id);
+    public AuthenticationComposite(String name) {
+        super();
+        this.name = name;
         authenticationComponentList = new ArrayList<>();
     }
 
+    public String name() {
+        return this.name;
+    }
+    
     @Override
     public boolean isComposite() {
         return true;

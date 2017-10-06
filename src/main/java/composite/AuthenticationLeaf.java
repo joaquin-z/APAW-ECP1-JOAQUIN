@@ -6,11 +6,18 @@ public class AuthenticationLeaf extends AuthenticationComponent {
 
     private Authentication authentication;
 
-    public AuthenticationLeaf(int id, Authentication authentication) {
-        super(id);
+    public AuthenticationLeaf(Authentication authentication) {
         this.authentication = authentication;
     }
+    
+    public int view() {
+        return authentication.getId();
+    }
 
+    public Authentication getAuthentication() {
+        return authentication;
+    }
+    
     @Override
     public boolean isComposite() {
         return false;
@@ -24,10 +31,6 @@ public class AuthenticationLeaf extends AuthenticationComponent {
     @Override
     public void remove(AuthenticationComponent authenticationComponent) {
         // Do nothing because is leaf
-    }
-
-    public Authentication getAuthentication() {
-        return authentication;
     }
 
 }
