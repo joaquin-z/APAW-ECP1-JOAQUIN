@@ -11,8 +11,7 @@
 * SonarCloud
 
 ### Patrones de diseño utilizados
-1.- Singleton
-2.- Builder
-3.- Composite   
-4.- Strategy
-
+* Singleton  
+* Builder  
+* Composite  
+* Strategy  
