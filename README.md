@@ -15,3 +15,5 @@
 * Builder  
 * Composite  
 * Strategy  
+
+[Enlace para ejemplo Strategy](https://github.com/joaquin-z/APAW-ECP1-JOAQUIN/wiki/Patron-Strategy)
