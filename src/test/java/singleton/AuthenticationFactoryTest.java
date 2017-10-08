@@ -4,13 +4,11 @@ import static org.junit.Assert.*;
 
 import java.util.Calendar;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import builder.AuthenticationBuilder;
 import entities.Authentication;
 import entities.Rol;
-import entities.User;
 
 public class AuthenticationFactoryTest {
     

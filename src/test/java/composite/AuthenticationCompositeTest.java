@@ -28,17 +28,32 @@ public class AuthenticationCompositeTest {
 
         this.authenticationLeaf = new AuthenticationLeaf(authentication);
 
-        this.authenticationComposite = new AuthenticationComposite("empleados");
+        this.authenticationComposite = new AuthenticationComposite("registros");
     }
 
     @Test
     public void testView() {
         assertEquals(1, this.authenticationLeaf.view());
     }
+    
+    @Test
+    public void testIsComposite() {
+        assertEquals(true, this.authenticationComposite.isComposite());
+    }
+    
+    @Test
+    public void testAdd() {
+        this.authenticationComposite.add(authenticationLeaf);
+    }
+    
+    @Test
+    public void testRemove() {
+        this.authenticationComposite.remove(authenticationLeaf);
+    }
 
     @Test
     public void testName() {
-        assertEquals("empleados", this.authenticationComposite.name());
+        assertEquals("registros", this.authenticationComposite.name());
 }
     
 }
